@@ -1,90 +1,168 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>BIJU - Doces & Morangos do Amor</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-<style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BIJU | Confeitaria</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <a class="logo" href="#home">
+        <span>BI</span>
+        JU
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Início</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">🌙</button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+      </div>
+    </div>
+  </header>
 
-    :root {
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-text">
+          <h1>Doces que deixam qualquer festa mais especial.</h1>
+          <p>
+            Bolos encantadores, docinhos delicados e sobremesas fofas para transformar seus momentos em lembranças doces.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#produtos">Ver catálogo</a>
+            <a class="btn btn-secondary" href="#contato">Fazer pedido</a>
+          </div>
+          <div class="badges">
+            <span class="badge">🥧 Bolos personalizados</span>
+            <span class="badge">🍓 Doces com carinho</span>
+            <span class="badge">🎉 Festa completa</span>
+          </div>
+        </div>
 
-      --main-bg: #121212;
+        <div class="hero-card">
+          <div class="showcase">
+            <div class="card-main">
+              <span>Doce da semana</span>
+              <div class="dessert-icon">🍰</div>
+              <h3>Bolo de morango</h3>
+              <p>Com chantilly e cobertura artesanal</p>
+            </div>
+            <div class="card-mini">
+              <div>
+                <strong>Entrega</strong>
+                <span>no mesmo dia</span>
+              </div>
+              <span>🛵</span>
+            </div>
+            <div class="card-mini">
+              <div>
+                <strong>Pedidos</strong>
+                <span>para festas</span>
+              </div>
+              <span>🎀</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      --highlight: #ff4d6d;
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <span>Por quê escolher a BIJU</span>
+          <h2>Delicadeza em cada detalhe</h2>
+        </div>
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <div class="highlight-icon">💖</div>
+            <h3>Receitas com amor</h3>
+            <p>Preparados com ingredientes selecionados e muito carinho.</p>
+          </article>
+          <article class="highlight-card">
+            <div class="highlight-icon">🎨</div>
+            <h3>Decoração personalizada</h3>
+            <p>Temas, cores e detalhes feitos para combinar com sua festa.</p>
+          </article>
+          <article class="highlight-card">
+            <div class="highlight-icon">📦</div>
+            <h3>Entrega cuidadosa</h3>
+            <p>Embalagem especial para manter tudo lindo e saboroso.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-      --card-bg: #181818;
+    <section class="section" id="produtos">
+      <div class="container">
+        <div class="section-title">
+          <span>Catálogo</span>
+          <h2>Nossos doces favoritos</h2>
+        </div>
+        <div class="products-grid" id="productGrid"></div>
+      </div>
+    </section>
 
-      --text-primary: #ffffff;
+    <section class="section" id="sobre">
+      <div class="container about-grid">
+        <div class="story-card">
+          <span class="badge">Sobre a BIJU</span>
+          <h2 style="margin: 14px 0;">Uma confeitaria que nasceu para alegrar</h2>
+          <p>
+            A BIJU é uma confeitaria criada para transformar momentos simples em celebrações memoráveis.
+            Aqui, cada bolo, doce e detalhe é feito com criatividade, sabor e carinho.
+          </p>
+          <p style="margin-top: 12px;">
+            Nosso objetivo é oferecer doces bonitos, irresistíveis e feitos especialmente para fazer seus convidados sorrirem.
+          </p>
+        </div>
+        <div class="hero-card">
+          <div class="showcase">
+            <div class="card-main">
+              <span>Especial para</span>
+              <div class="dessert-icon">🍓</div>
+              <h3>Festas e ocasiões</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      --text-secondary: #b3b3b3;
+    <section class="section" id="contato">
+      <div class="container">
+        <div class="contact-card">
+          <div class="section-title" style="margin-bottom: 18px;">
+            <span>Faça seu pedido</span>
+            <h2>Vamos criar algo lindo juntos</h2>
+          </div>
+          <p>Escreva para nós e montamos a sua sobremesa ideal para a sua festa.</p>
+          <form class="contact-form">
+            <input type="text" placeholder="Seu nome" />
+            <input type="email" placeholder="Seu e-mail" />
+            <input type="text" placeholder="Tipo de festa" />
+            <textarea placeholder="Conte como você imagina o seu doce..."></textarea>
+            <button class="btn btn-primary" type="submit">Enviar pedido</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    }
- 
-    * {
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> BIJU Confeitaria · Feito com carinho</p>
+    </div>
+  </footer>
 
-      margin: 0;
-
-      padding: 0;
-
-      box-sizing: border-box;
-
-    }
- 
-    body {
-
-      background-color: var(--main-bg);
-
-      color: var(--text-primary);
-
-      font-family: 'Montserrat', sans-serif;
-
-    }
- 
-    header {
-
-      position: fixed;
-
-      width: 100%;
-
-      background-color: #000;
-
-      padding: 20px 40px;
-
-      display: flex;
-
-      justify-content: space-between;
-
-      align-items: center;
-
-      z-index: 1000;
-
-    }
- 
-    header h1 {
-
-      color: var(--highlight);
-
-      font-size: 1.8rem;
-
-    }
- 
-    nav a {
-
-      color: var(--text-secondary);
-
-      text-decoration: none;
-
-      margin-left: 20px;
-
-      font-weight: bold;
-
-    }
- 
-    nav a:hover {
-
-      color: var(--highlight);
-
-    }
-
+  <script src="script.js"></script>
+</body>
+</html>
  
